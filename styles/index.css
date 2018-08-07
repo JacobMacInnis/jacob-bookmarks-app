@@ -28,16 +28,22 @@ font-family: 'Cairo', sans-serif; */
   box-shadow: -1px 0px 60px -6px rgba(0,0,0,0.32);
 }
 a {
+  margin-top: 15px;
+  margin-bottom: 15px;
   text-decoration: none;
   padding: 10px;
   border: 2px solid grey;
   background-color: #7DD181;
   display: block;
 }
+a:hover {
+  background-color: #8adb8e;
+  color: black;
+}
 button:hover, select:hover {
   cursor: pointer;
   background-color: #ED6A5A;
-  font-size: .75em;
+  /* font-size: .75em; */
 }
 /* Header styles */
 header {
@@ -48,7 +54,7 @@ header {
   -webkit-box-shadow: 0px 0px 116px -23px rgba(0,0,0,0.58);
   -moz-box-shadow: 0px 0px 116px -23px rgba(0,0,0,0.58);
   box-shadow: 0px 0px 116px -23px rgba(0,0,0,0.58);
-  border: 2px solid #788585;
+  border: 2px solid white;
   border-radius: 50%;
 }
 h1 {
@@ -89,21 +95,44 @@ h1 {
   box-shadow: -1px 0px 29px -9px rgba(0,0,0,0.47);
   border-radius: 50%;
 }
+select {
+  height: 48px;
+  border-radius: 50%;
+
+ 
+
+}
 /* Input */
 .form-grid-container {
   display: flex;
   flex-direction: row;
   background-color: #788585;
   flex-wrap: wrap;
+  border-radius: 30px 30px 50px 50px;
+  padding-bottom: 15px;
+}
+.button-container {
+  margin: 0 auto;
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 30px;
 }
 input, textarea {
   border: 2px solid grey;
   font-size: 20px;
   color: black;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 h3 {
   background: #ED6A5A;
+  margin: 0 auto;
   width: fit-content;
+  border-radius: 50px 50px 0px 0px;
+-moz-border-radius: 50px 50px 0px 0px;
+-webkit-border-radius: 50px 50px 0px 0px;
+padding: 15px 25px 10px 25px;
 }
 label {
   font-size: 20px;
@@ -147,6 +176,7 @@ li {
   -webkit-box-shadow: 2px 0px 27px -2px rgba(120,133,133,1);
 -moz-box-shadow: 2px 0px 27px -2px rgba(120,133,133,1);
 box-shadow: 2px 0px 27px -2px rgba(120,133,133,1);
+/* min-height: 140px; */
 }
 li h2 {
   padding-top: 10px;
@@ -167,6 +197,7 @@ h2 {
 .star-rating {
   padding: 5px;
   font-size: 30px;
+  min-height: 53px;
 }
 .js-li-expand:hover {
   cursor: pointer;
@@ -182,7 +213,13 @@ h2 {
 }
 svg {
   display: inline-block;
-  
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height: 25px;
+}
+h5 {
+  padding-top: 10px;
+  font-size: 40px;
 }
 /* Media Queries */
 @media (min-width: 200px) {
@@ -212,7 +249,9 @@ svg {
 @media (max-width: 600px) {
   .main {
     padding-top: 50px;
+    height: 100%;
   }
+
   .form-grid-container {
     display: inline-block;
     flex-direction: row;
@@ -220,6 +259,7 @@ svg {
     flex-wrap: wrap;
     margin: auto;
     width:100%;
+
   }
   .form-grid {
     display: flex; 
@@ -240,6 +280,7 @@ svg {
   
   main {
     width: 100%;
+    height: 100%;
     border: 0px solid #788585;
     margin: 0;
     border-radius: 0%;
